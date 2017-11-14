@@ -52,6 +52,7 @@ public class CoreGui extends JFrame {
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		scroll.setViewportView(area);
+		scroll.setAutoscrolls(true);
 		area.setEditable(false);
 		queue.setColumns(26);
 		uri.setText(prop.getProperty("uri"));
