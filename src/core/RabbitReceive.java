@@ -64,7 +64,6 @@ public class RabbitReceive implements Runnable{
 			cg.bt.setEnabled(true);
 			cg.stop.setEnabled(false);
         }
-        System.out.println("ciao");
     }
     
     public void interruptReceiver() {
