@@ -30,7 +30,6 @@ public class CoreGui extends JFrame {
 	public JCheckBox durable;
 	public JCheckBox exclusive;
 	public JCheckBox autoDelete;
-	public JButton scrollbtn;
 	public JScrollPane scroll;
 	
 	public CoreGui(Properties prop) {
@@ -39,7 +38,6 @@ public class CoreGui extends JFrame {
 		area=new JTextArea(300,400);
 		bt=new JButton("Start receiver");
 		uri=new JTextField();
-		scrollbtn=new JButton("Disable auto-scroll");
 		uri.setColumns(30);
 		queue=new JTextField();
 		label2=new JLabel("Queue name:");
@@ -68,10 +66,8 @@ public class CoreGui extends JFrame {
 		MyActionListener mal=new MyActionListener(this);
 		bt.setActionCommand("start");
 		stop.setActionCommand("stop");
-		scrollbtn.setActionCommand("disable");
 		bt.addActionListener(mal);
 		stop.addActionListener(mal);
-		scrollbtn.addActionListener(mal);
 
 		
 		//Populate panels
@@ -88,7 +84,6 @@ public class CoreGui extends JFrame {
 		thirdRow.add(durable);
 		thirdRow.add(exclusive);
 		thirdRow.add(autoDelete);
-		thirdRow.add(scrollbtn);
 		topPnl.setBorder(BorderFactory.createTitledBorder("Config"));
 		topPnl.add(firstRow);
 		topPnl.add(secondRow);
