@@ -36,7 +36,7 @@ public class RabbitReceive implements Runnable{
             System.out.println("[RabbitMQ] Waiting for messages...");
             
 		} catch (KeyManagementException | NoSuchAlgorithmException | URISyntaxException | IOException | TimeoutException e1) {
-			JOptionPane.showMessageDialog(null,"Something went wrong.\n Check your connection and make sure the settings are valid for you AMQP server :(","Error",JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null,"Something went wrong :( .\n Check your connection and make sure the settings are valid for you AMQP server","Error",JOptionPane.ERROR_MESSAGE);
 			e1.printStackTrace();
 			cg.bt.setEnabled(true);
 			cg.stop.setEnabled(false);
