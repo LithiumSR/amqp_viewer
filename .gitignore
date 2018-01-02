@@ -3,3 +3,8 @@
 *.prefs
 *.class
 *.cfg
+/target/
+/.idea/
+/.settings/
+.classpath
+.project
