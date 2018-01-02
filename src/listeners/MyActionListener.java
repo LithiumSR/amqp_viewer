@@ -10,6 +10,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
+import javax.swing.JOptionPane;
+
 import core.RabbitReceive;
 import gui.CoreGui;
 
@@ -28,13 +30,20 @@ public class MyActionListener implements ActionListener {
 			saveConfig();
 			cg.bt.setEnabled(false);
 			cg.stop.setEnabled(true);
-			rr=new RabbitReceive(cg.queue.getText(),cg.uri.getText(),cg);
-			Thread t1=new Thread(rr);
-			t1.start();
-
-
+			if(cg.queue.getText().trim().equals("")||cg.uri.getText().trim().equals("")) {
+				JOptionPane.showMessageDialog(null,"Something went wrong :( .\n Check your connection and make sure the settings are valid for you AMQP server","Error",JOptionPane.ERROR_MESSAGE);
+			}
+			else {
+				cg.queue.setEnabled(false);
+				cg.uri.setEnabled(false);
+				rr=new RabbitReceive(cg.queue.getText(),cg.uri.getText(),cg);
+				Thread t1=new Thread(rr);
+				t1.start();
+			}
 		}
 		else if (e.getActionCommand().equals("stop")) {
+			cg.queue.setEnabled(true);
+			cg.uri.setEnabled(true);
 			rr.interruptReceiver();
 			cg.stop.setEnabled(false);
 			cg.bt.setEnabled(true);
