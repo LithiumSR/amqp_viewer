@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>AMQP_Viewer</groupId>
   <artifactId>AMQP_Viewer</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
 
   <dependencies>
     <dependency>

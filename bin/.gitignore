@@ -1,4 +1,11 @@
-/core/
-/gui/
-/launcher/
-/listeners/
+
+*.txt
+*.prefs
+*.class
+*.cfg
+/target/
+/.idea/
+/.settings/
+.classpath
+.project
+dependency-reduced-pom.xml

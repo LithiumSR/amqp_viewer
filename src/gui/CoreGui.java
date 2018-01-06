@@ -100,6 +100,6 @@ public class CoreGui extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 		this.setSize(600, 600);
-		this.setResizable(false);
+		//this.setResizable(false);
 	}
 }
