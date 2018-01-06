@@ -40,6 +40,8 @@ public class RabbitReceive implements Runnable{
 			e1.printStackTrace();
 			cg.bt.setEnabled(true);
 			cg.stop.setEnabled(false);
+            cg.queue.setEnabled(true);
+            cg.uri.setEnabled(true);
 		}
 
 
